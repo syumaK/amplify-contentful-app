@@ -20,8 +20,8 @@ import config from './aws-exports';
 set contentful client
 */
 export const client = contentful.createClient({
-  space: 'TODO_JUST_CREATED',
-  accessToken: 'TODO_JUST_CREATED'
+  space: 'f4fml958i6ja',
+  accessToken: '-wPI83bY_UbhRMCf9HOA3TiXdmMnxfFisHtbonuD_Ug'
 });
 
 Amplify.configure(config);
