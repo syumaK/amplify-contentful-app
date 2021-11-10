@@ -1,9 +1,8 @@
 # REACTJS Web App
 
-A sample web app to made using Contentful](https://www.contentful.com/) and [AWS Amplify](https://aws.amazon.com/amplify/). Data lives in Contentful, code lives with GitHub and backend lives in AWS. 
+A sample web app to made using [Contentful](https://www.contentful.com/) and [AWS Amplify](https://aws.amazon.com/amplify/). Data lives in Contentful, code lives with GitHub and backend lives in AWS. 
 
-![Home Page](images/home_page.png)
-
+![AmplifyContentful](./media/contentful-webinar.gif)
 
 ### Topics we'll be covering:
 
@@ -54,12 +53,20 @@ cd amplify-contentful-app
 yarn add aws-amplify @aws-amplify/ui-react
 ```
 
-### `Installing Amplify CLI & Initializing the Backend`
+## `Installing Amplify CLI & Initializing the Backend`
 
-Install the AWS Amplify CLI:
+### Installing the AWS Amplify CLI:
+
 
 ```bash
-npm install -g @aws-amplify/cli
+# NPM
+$ npm install -g @aws-amplify/cli
+
+# cURL (Mac & Linux)
+curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+
+# cURL (Windows)
+curl -sL https://aws-amplify.github.io/amplify-cli/install-win -o install.cmd && install.cmd
 ```
 
 Now we need to configure the CLI with our credentials.
@@ -77,6 +84,8 @@ $ amplify configure
 ? secretAccessKey: (<YOUR_SECRET_ACCESS_KEY>)
 - Profile Name: amplify-cli-user
 ```
+
+### Initializing A New Project
 
 We’ll use the AWS Amplify CLI to initialize backend components such as authentication to support our app:
 
@@ -211,7 +220,7 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 ### `Adding Contentful`
 
-First Contentful modules
+First install Contentful package
 
 ```bash
 yarn add contentful
@@ -277,7 +286,7 @@ import Amplify, { Analytics } from 'aws-amplify'
     
     Analytics.record({
       name:'userVisit',
-      attributes: { name : 'Stefan', location: 'CPT'}
+      attributes: { name : 'Stefan', location: 'Berlin'}
     });
     
     Analytics.record({
