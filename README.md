@@ -1,4 +1,4 @@
-# REACTJS Web App
+# Building Web Applications with speed using Contentful and AWS Amplify
 
 A sample web app to made using [Contentful](https://www.contentful.com/) and [AWS Amplify](https://aws.amazon.com/amplify/). Data lives in Contentful, code lives with GitHub and backend lives in AWS. 
 
