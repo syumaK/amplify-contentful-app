@@ -13,7 +13,7 @@ import * as contentful from 'contentful'
 import amplify modules
 */
 import { AmplifySignOut, withAuthenticator } from '@aws-amplify/ui-react';
-import Amplify from 'aws-amplify';
+import Amplify, { Analytics } from 'aws-amplify';
 import config from './aws-exports';
 
 /*
@@ -38,11 +38,28 @@ function App() {
     })
   }), []);
 
+  // Button for events
+  function submitEvents (){
+  
+    Analytics.record({
+      name:'userVisit',
+      attributes: { name : 'Stefan', location: 'Berlin'}
+    });
+    
+    Analytics.record({
+      name:'siteVisit',
+      attributes: { name : 'webinar', month: 'Nov'}
+    });
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <AmplifySignOut/>
+      <AmplifySignOut/>
+        { title ? title : 'Loading...' }
+      
         <img src={logo} className="App-logo" alt="logo" />
+        <button onClick={submitEvents}>SubmitEvents</button>
       </header>
     </div>
   );
