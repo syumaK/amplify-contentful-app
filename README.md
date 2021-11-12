@@ -1,6 +1,6 @@
 # Building Web Applications with speed using Contentful and AWS Amplify
 
-A sample web app to made using [Contentful](https://www.contentful.com/) and [AWS Amplify](https://aws.amazon.com/amplify/). Data lives in Contentful, code lives with GitHub and backend lives in AWS. 
+A sample web app made using [Contentful](https://www.contentful.com/) and [AWS Amplify](https://aws.amazon.com/amplify/). Data lives in Contentful, code lives with GitHub and backend lives in AWS. 
 
 ![AmplifyContentful](./media/contentful-webinar.gif)
 
@@ -314,15 +314,15 @@ amplify add hosting
 ```
 The Amplify Console opens and displays your deployed backend environment. 
 
-![Amplify console](images/amplify_console.png)
+![Amplify console](media/amplify_console.png)
 
 Choose the Frontend environments tab, select a Git provider, then choose Connect Branch.
 
-![Frontend environments](images/frontend_environments.png)
+![Frontend environments](media/frontend_environments.png)
 
 After your site is successfully deployed, you'll see four green checkmarks. To view the live site, click on the automatically generated URL circled in red in the following screenshot.
 
-![Live](images/live.png)
+![Live](media/live.png)
 
 👏 Congratulations, your app is online!
 
